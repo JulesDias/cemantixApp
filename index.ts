@@ -19,7 +19,7 @@ async function handler(_req: Request): Promise<Response> {
 
   const similarityRequestBody = JSON.stringify({
     word1: "centrale",
-    word2: _req.searchParams.get("word"),
+    word2: _req.url.searchParams.get("word"),
   });
 
   const requestOptions = {
